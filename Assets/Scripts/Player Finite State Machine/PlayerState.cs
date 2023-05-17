@@ -12,22 +12,26 @@ public class PlayerState
     protected float startedTime;
     protected bool isAnimationFinished;
     protected bool isExitingState;
-    // TODO add a variable for the animation boolean name
-    public PlayerState (Player player, PlayerStateMachine stateMachine,PlayerData playerData)
+    private string animationName;
+    public PlayerState (Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animationName)
     {
         this.player = player;
         this.playerData = playerData;
         this.stateMachine = stateMachine;
+        this.animationName = animationName;
     }
     public virtual void Enter() {
         DoChecks();
+
         startedTime = Time.time;
         Debug.Log(stateMachine.CurrentState.ToString());
+        player.Anim.SetBool(animationName, true);
         isAnimationFinished = false;
         isExitingState = false;
     }
     public virtual void Exit() {
         isExitingState = true;
+        player.Anim.SetBool(animationName, false);
     }
     public virtual void LogicalUpdate() { }
     public virtual void PhysicalUpdate() {

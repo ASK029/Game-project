@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad52655d022c93b4b996bc45aea22675, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  movementVelocity: 10
-  jumpVelocity: 22
+  movementVelocity: 7
+  maxSpeed: 15
+  accelerationTime: 0.2
+  jumpVelocity: 15
   numberOfJumps: 1
   jumpHeightMultiplier: 0.5
   coyoteTime: 0.3
@@ -21,9 +23,17 @@ MonoBehaviour:
   wallJumpTimer: 0.2
   wallJumpAngle: {x: 1, y: 2}
   wallSlideVelocity: 1
-  wallClimbVelocity: 3
-  groundCheckRadius: 0.2
-  tallOfLineWallCheck: 0.6
+  wallClimbVelocity: 5
+  dashCoolDown: 0.5
+  maxHoldTime: 1
+  holdTimeScale: 0.25
+  dashTime: 0.2
+  dashVelocity: 20
+  drag: 10
+  dashEndYMultiplier: 0.05
+  distanceBetweenAfterImage: 0.5
+  groundCheckRadius: 0.1
+  tallOfLineWallCheck: 0.25
   groundMask:
     serializedVersion: 2
     m_Bits: 64

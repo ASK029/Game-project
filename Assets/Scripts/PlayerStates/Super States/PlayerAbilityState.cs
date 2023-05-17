@@ -7,7 +7,7 @@ public class PlayerAbilityState : PlayerState
     protected bool AbilityDone;
 
     private bool isGrounded;
-    public PlayerAbilityState(Player player, PlayerStateMachine stateMachine, PlayerData playerData) : base(player, stateMachine, playerData)
+    public PlayerAbilityState(Player player, PlayerStateMachine stateMachine, PlayerData playerData,string animationName) : base(player, stateMachine, playerData,animationName)
     {
     }
 

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class Player : MonoBehaviour
 {
@@ -16,6 +18,9 @@ public class Player : MonoBehaviour
     public PlayerWallClimpState PlayerWallClimbState { get; private set; } 
     public PlayerWallGrabState PlayerWallGrabState { get; private set; }
     public PlayerWallJumpState PlayerWallJumpState { get; private set; }
+
+    public PlayerDashState PlayerDashState { get; private set; }
+    public PlayerDashStateTwo PlayerDashStateTwo { get; private set; }
     [SerializeField] private PlayerData playerData;
     #endregion
 
@@ -23,6 +28,9 @@ public class Player : MonoBehaviour
     public PlayerInputHandler InputHandler { get; private set; }
 
     public Rigidbody2D RB { get; private set; }
+    public Animator Anim { get; private set; }
+
+    public Transform DashDirectionIndicator { get; private set; }
     #endregion
 
     #region Check Transform
@@ -38,26 +46,32 @@ public class Player : MonoBehaviour
     public int FacingDirection { get; private set; }
 
     private Vector2 workSpace;
+    private float currentSpeed;
     #endregion
 
     #region Unity Callback Functions
     private void Awake()
     {
-        InputHandler = GetComponent<PlayerInputHandler>();
-        RB = GetComponent<Rigidbody2D>();
         StateMachine = new PlayerStateMachine();
-        PlayerIdleState = new PlayerIdleState(this, StateMachine, playerData);
-        PlayerMoveState = new PlayerMoveState(this, StateMachine, playerData);
-        PlayerJumpState = new PlayerJumpState(this, StateMachine, playerData);
-        PlayerInAirState = new PlayerInAirState(this, StateMachine, playerData);
-        PlayerLandState = new PlayerLandState(this, StateMachine, playerData);
-        PlayerWallSlideState = new PlayerWallSlideState(this, StateMachine, playerData);
-        PlayerWallGrabState = new PlayerWallGrabState(this, StateMachine, playerData);
-        PlayerWallClimbState = new PlayerWallClimpState(this, StateMachine, playerData);
-        PlayerWallJumpState = new PlayerWallJumpState(this, StateMachine, playerData);
+        PlayerIdleState = new PlayerIdleState(this, StateMachine, playerData,"idle");
+        PlayerMoveState = new PlayerMoveState(this, StateMachine, playerData,"move");
+        PlayerJumpState = new PlayerJumpState(this, StateMachine, playerData,"move");
+        PlayerInAirState = new PlayerInAirState(this, StateMachine, playerData,"jump");
+        PlayerLandState = new PlayerLandState(this, StateMachine, playerData,"idle");
+        PlayerWallSlideState = new PlayerWallSlideState(this, StateMachine, playerData,"wallSlide");
+        PlayerWallGrabState = new PlayerWallGrabState(this, StateMachine, playerData,"wallGrab");
+        PlayerWallClimbState = new PlayerWallClimpState(this, StateMachine, playerData,"wallClimp");
+        PlayerWallJumpState = new PlayerWallJumpState(this, StateMachine, playerData,"jump");
+        PlayerDashState = new PlayerDashState(this, StateMachine, playerData, "dash");
+        PlayerDashStateTwo = new PlayerDashStateTwo(this, StateMachine, playerData, "dash");
     }
     private void Start()
     {
+        currentSpeed = 0.0f;
+        InputHandler = GetComponent<PlayerInputHandler>();
+        RB = GetComponent<Rigidbody2D>();
+        Anim = GetComponent<Animator>();
+        DashDirectionIndicator = transform.Find("DashDirectionIndicator");
         FacingDirection = 1;
         StateMachine.Initalize(PlayerIdleState);
     }
@@ -81,6 +95,12 @@ public class Player : MonoBehaviour
         RB.velocity = workSpace;
         CurrentVelocity = RB.velocity;
     }
+    public void SetVelocity (float velocity, Vector2 direction)
+    {
+        workSpace = direction * velocity;
+        RB.velocity = workSpace;
+        CurrentVelocity = workSpace;
+    }
     public void SetVelocityX(float velocity)
     {
         workSpace.Set(velocity, CurrentVelocity.y);
@@ -93,6 +113,18 @@ public class Player : MonoBehaviour
         workSpace.Set(CurrentVelocity.x, velocity);
         RB.velocity = workSpace;
         CurrentVelocity = RB.velocity;
+    }
+    public void AddForceX (Vector2 force)
+    {
+        
+        if (Mathf.Abs(RB.velocity.x) <= playerData.maxSpeed )
+        {
+            RB.AddForce(force, ForceMode2D.Force);
+        }
+        /*else
+        {
+            RB.velocity = new Vector2(playerData.maxSpeed,0);
+        }*/
     }
     #endregion
 

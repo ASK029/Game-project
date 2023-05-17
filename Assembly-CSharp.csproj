@@ -9,7 +9,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
+<<<<<<< HEAD
     <ProjectGuid>{06643ECF-9AF3-C570-933B-29911587D09B}</ProjectGuid>
+=======
+    <ProjectGuid>{FEFE3D02-F6E2-93D9-0A51-246F99EB9AB9}</ProjectGuid>
+>>>>>>> 56491621 (adding idle, run and jump sprites)
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,10 +62,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player Finite State Machine\PlayerState.cs" />
     <Compile Include="Assets\Scripts\Data\PlayerData.cs" />
+    <Compile Include="Assets\Scripts\PlayerAfterImage.cs" />
     <Compile Include="Assets\Scripts\PlatformController.cs" />
     <Compile Include="Assets\Scripts\PlayerStates\Super States\PlayerAbilityState.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerStates\Sub States\PlayerInAirState.cs" />
+    <Compile Include="Assets\Scripts\PlayerStates\Sub States\PlayerDashStateTwo.cs" />
     <Compile Include="Assets\Scripts\PlayerStates\Sub States\PlayerWallJumpState.cs" />
     <Compile Include="Assets\Scripts\Player Finite State Machine\PlayerStateMachine.cs" />
     <Compile Include="Assets\Scripts\PlayerStates\Sub States\PlayerWallSlideState.cs" />
@@ -69,6 +75,8 @@
     <Compile Include="Assets\Scripts\PlayerStates\Sub States\PlayerLandState.cs" />
     <Compile Include="Assets\Scripts\Input\PlayerInputHandler.cs" />
     <Compile Include="Assets\Scripts\PlayerStates\Sub States\PlayerWallGrabState.cs" />
+    <Compile Include="Assets\Scripts\PlayerAfterImagePool.cs" />
+    <Compile Include="Assets\Scripts\PlayerStates\Sub States\PlayerDashState.cs" />
     <Compile Include="Assets\Scripts\Player Finite State Machine\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerStates\Sub States\PlayerIdleState.cs" />
     <Compile Include="Assets\Scripts\PlayerStates\Sub States\PlayerJumpState.cs" />
@@ -812,11 +820,19 @@
     <Reference Include="Unity.2D.IK.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="Unity.Services.Core.Analytics">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+=======
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+>>>>>>> 56491621 (adding idle, run and jump sprites)
     </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>

@@ -9,11 +9,12 @@ public class PlayerInAirState : PlayerState
     private bool isTouchingWall;
     private bool isTouchingWallBack;
     private bool jumpInput;
+    private bool dashInput;
     private bool grapInput;
     private bool coyoteTime;
     private bool isJumping;
     private bool jumpInputStop;
-    public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData) : base(player, stateMachine, playerData)
+    public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData,string animationName) : base(player, stateMachine, playerData,animationName)
     {
     }
 
@@ -43,7 +44,7 @@ public class PlayerInAirState : PlayerState
         jumpInput = player.InputHandler.JumpInput;
         jumpInputStop = player.InputHandler.JumpInputStop;
         grapInput = player.InputHandler.GrapInput;
-
+        dashInput = player.InputHandler.DashInput;
         CheckJumpMultiplier();
         if (isGrounded && player.CurrentVelocity.y < Mathf.Epsilon)
         {
@@ -66,10 +67,19 @@ public class PlayerInAirState : PlayerState
         {
             stateMachine.ChangeState(player.PlayerWallSlideState);
         }
+        /*else if (dashInput && player.PlayerDashState.CheckIfCanDash())
+        {
+            stateMachine.ChangeState(player.PlayerDashState);
+        }*/
+        else if (dashInput && player.PlayerDashStateTwo.CheckIfCanDash())
+        {
+            stateMachine.ChangeState(player.PlayerDashStateTwo);
+        }
         else
         {
             player.CheckIfCanFlip((int)input.x);
             player.SetVelocityX(input.x * playerData.movementVelocity);
+            player.Anim.SetFloat("yVelocity", player.CurrentVelocity.y);
         }
     }
 

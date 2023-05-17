@@ -9,7 +9,7 @@ public class PlayerTouchingWallState : PlayerState
     protected int yInput;
     protected bool jumpInput;
     protected bool grapInput;
-    public PlayerTouchingWallState(Player player, PlayerStateMachine stateMachine, PlayerData playerData) : base(player, stateMachine, playerData)
+    public PlayerTouchingWallState(Player player, PlayerStateMachine stateMachine, PlayerData playerData,string animationName) : base(player, stateMachine, playerData,animationName)
     {
     }
     public override void DoChecks()

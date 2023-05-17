@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerWallClimpState : PlayerTouchingWallState
 {
-    public PlayerWallClimpState(Player player, PlayerStateMachine stateMachine, PlayerData playerData) : base(player, stateMachine, playerData)
+    public PlayerWallClimpState(Player player, PlayerStateMachine stateMachine, PlayerData playerData,string animationName) : base(player, stateMachine, playerData, animationName)
     {
     }
 

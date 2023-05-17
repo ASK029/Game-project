@@ -9,7 +9,8 @@ public class PlayerGroundedState : PlayerState
     private bool grapInput;
     private bool isGrounded;
     private bool isTouchingWall;
-    public PlayerGroundedState(Player player, PlayerStateMachine stateMachine, PlayerData playerData) : base(player, stateMachine, playerData)
+    private bool dashInput;
+    public PlayerGroundedState(Player player, PlayerStateMachine stateMachine, PlayerData playerData,string animationName) : base(player, stateMachine, playerData, animationName)
     {
     }
 
@@ -24,6 +25,8 @@ public class PlayerGroundedState : PlayerState
     {
         base.Enter();
         player.PlayerJumpState.ResetAmountOfJumps();
+        //player.PlayerDashState.ResetDashState();
+        player.PlayerDashStateTwo.ResetDashState();
     }
     public override void LogicalUpdate()
     {
@@ -31,6 +34,7 @@ public class PlayerGroundedState : PlayerState
         input = player.InputHandler.MovementInput;
         JumpInput = player.InputHandler.JumpInput;
         grapInput = player.InputHandler.GrapInput;
+        dashInput = player.InputHandler.DashInput;
         if (JumpInput && player.PlayerJumpState.CheckIfCanJump())
         {
             stateMachine.ChangeState(player.PlayerJumpState);
@@ -44,6 +48,14 @@ public class PlayerGroundedState : PlayerState
         {
             stateMachine.ChangeState(player.PlayerWallGrabState);
         }
-        
+        /*else if (dashInput && player.PlayerDashState.CheckIfCanDash())
+        {
+            stateMachine.ChangeState(player.PlayerDashState);
+        }*/
+        else if (dashInput && player.PlayerDashStateTwo.CheckIfCanDash())
+        {
+            stateMachine.ChangeState(player.PlayerDashStateTwo);
+        }
+
     }
 }

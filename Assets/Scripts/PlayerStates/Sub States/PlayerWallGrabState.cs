@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerWallGrabState : PlayerTouchingWallState
 {
     private Vector2 holdPosition;
-    public PlayerWallGrabState(Player player, PlayerStateMachine stateMachine, PlayerData playerData) : base(player, stateMachine, playerData)
+    public PlayerWallGrabState(Player player, PlayerStateMachine stateMachine, PlayerData playerData,string animationName) : base(player, stateMachine, playerData, animationName)
     {
     }
 

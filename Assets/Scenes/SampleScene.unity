@@ -335,8 +335,6 @@ Transform:
   m_Father: {fileID: 534409076}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &149069314
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +512,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
->>>>>>> 56491621 (adding idle, run and jump sprites)
 --- !u!1 &242182361
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,8 +543,6 @@ Transform:
   m_Father: {fileID: 534409076}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &349814577
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,7 +659,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> 56491621 (adding idle, run and jump sprites)
 --- !u!1 &403646726
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,11 +683,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403646726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: 0, y: -0.4, z: 0}
-=======
   m_LocalPosition: {x: -0.019, y: 0.049, z: 0}
->>>>>>> 56491621 (adding idle, run and jump sprites)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -822,10 +812,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-<<<<<<< HEAD
-=======
   - component: {fileID: 519420033}
->>>>>>> 56491621 (adding idle, run and jump sprites)
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -868,11 +855,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-<<<<<<< HEAD
-  orthographic size: 6.78
-=======
   orthographic size: 3.43
->>>>>>> 56491621 (adding idle, run and jump sprites)
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -903,8 +886,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!114 &519420033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -939,7 +920,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
->>>>>>> 56491621 (adding idle, run and jump sprites)
 --- !u!1 &534409075
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,11 +944,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534409075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -1.7873358, y: 4.178022, z: -0.22566588}
-=======
   m_LocalPosition: {x: -3.1, y: 1.1, z: -0.22566588}
->>>>>>> 56491621 (adding idle, run and jump sprites)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1036,11 +1012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728414515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-=======
   m_LocalPosition: {x: -0.009, y: 0.267, z: 0}
->>>>>>> 56491621 (adding idle, run and jump sprites)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1078,8 +1050,6 @@ Transform:
   m_Father: {fileID: 1082065744}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &940615040
 GameObject:
   m_ObjectHideFlags: 3
@@ -1252,7 +1222,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
->>>>>>> 56491621 (adding idle, run and jump sprites)
 --- !u!1 &1082065739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,11 +1241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-<<<<<<< HEAD
-  m_IsActive: 1
-=======
   m_IsActive: 0
->>>>>>> 56491621 (adding idle, run and jump sprites)
 --- !u!50 &1082065742
 Rigidbody2D:
   serializedVersion: 4
@@ -1530,11 +1495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116055762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -0.9468, y: -1.87, z: 0}
-=======
   m_LocalPosition: {x: -0.9468, y: -5.1, z: -0.6}
->>>>>>> 56491621 (adding idle, run and jump sprites)
   m_LocalScale: {x: 316.63037, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1556,10 +1517,7 @@ GameObject:
   - component: {fileID: 1432963789}
   - component: {fileID: 1432963791}
   - component: {fileID: 1432963790}
-<<<<<<< HEAD
-=======
   - component: {fileID: 1432963792}
->>>>>>> 56491621 (adding idle, run and jump sprites)
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1640,8 +1598,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 6b1ebdfc-f40f-4823-bc81-6ca7ff981d83
     m_ActionName: GamePlay/Grap[/Keyboard/ctrl]
-<<<<<<< HEAD
-=======
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1432963788}
@@ -1674,16 +1630,11 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: fa8586f2-97b7-4e30-888e-e91c828b0eba
     m_ActionName: GamePlay/DashDirection[/Mouse/position]
->>>>>>> 56491621 (adding idle, run and jump sprites)
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: GamePlay
   m_SplitScreenIndex: -1
-<<<<<<< HEAD
-  m_Camera: {fileID: 0}
-=======
   m_Camera: {fileID: 519420031}
->>>>>>> 56491621 (adding idle, run and jump sprites)
 --- !u!212 &1432963786
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1725,20 +1676,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-=======
   m_Sprite: {fileID: 21300000, guid: f937d587d398434499c154ea24b3483a, type: 3}
->>>>>>> 56491621 (adding idle, run and jump sprites)
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-<<<<<<< HEAD
-  m_Size: {x: 1, y: 1}
-=======
   m_Size: {x: 2, y: 2}
->>>>>>> 56491621 (adding idle, run and jump sprites)
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1752,20 +1695,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432963784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -1.1, y: 5.2, z: 0}
-=======
   m_LocalPosition: {x: 1.275, y: -3.826, z: 0}
->>>>>>> 56491621 (adding idle, run and jump sprites)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 403646727}
   - {fileID: 728414516}
-<<<<<<< HEAD
-=======
   - {fileID: 960017879}
->>>>>>> 56491621 (adding idle, run and jump sprites)
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1810,31 +1746,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-<<<<<<< HEAD
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-=======
   m_Offset: {x: -0.010506034, y: 0.35173035}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.40625, y: 0.6875}
     newSize: {x: 2, y: 2}
->>>>>>> 56491621 (adding idle, run and jump sprites)
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-<<<<<<< HEAD
-  m_Size: {x: 1, y: 1}
-=======
   m_Size: {x: 0.4454713, y: 0.6742778}
->>>>>>> 56491621 (adding idle, run and jump sprites)
   m_EdgeRadius: 0
 --- !u!50 &1432963791
 Rigidbody2D:
@@ -1857,8 +1780,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
-<<<<<<< HEAD
-=======
 --- !u!95 &1432963792
 Animator:
   serializedVersion: 4
@@ -1879,7 +1800,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
->>>>>>> 56491621 (adding idle, run and jump sprites)
 --- !u!1 &1505407881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,19 +1904,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505407881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: 6.55, y: -0.4088, z: -0.23618555}
-=======
   m_LocalPosition: {x: 8.3, y: -0.4088, z: -0.23618555}
->>>>>>> 56491621 (adding idle, run and jump sprites)
   m_LocalScale: {x: 3.9999287, y: 151.8543, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &1655949480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,7 +1979,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> 56491621 (adding idle, run and jump sprites)
 --- !u!1 &1872994361
 GameObject:
   m_ObjectHideFlags: 0

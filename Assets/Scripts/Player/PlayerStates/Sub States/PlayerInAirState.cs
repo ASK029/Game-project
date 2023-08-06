@@ -22,6 +22,7 @@ public class PlayerInAirState : PlayerState
     {
         base.DoChecks();
         isGrounded = player.CheckIfGrounded();
+
         isTouchingWall = player.CheckIfTouchingWall();
         isTouchingWallBack = player.CheckIfTouchingWallBack();
     }
@@ -39,6 +40,7 @@ public class PlayerInAirState : PlayerState
     public override void LogicalUpdate()
     {
         base.LogicalUpdate();
+        Debug.Log(player.CurrentVelocity.y);
         CheckCoyoteTime();
         input = player.InputHandler.MovementInput;
         jumpInput = player.InputHandler.JumpInput;

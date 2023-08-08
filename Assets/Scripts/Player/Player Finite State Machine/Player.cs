@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public PlayerMoveState PlayerMoveState { get; private set; }
     public PlayerJumpState PlayerJumpState { get; private set; }
     public PlayerInAirState PlayerInAirState { get; private set; }
+    public PlayerDieState PlayerDieState { get; private set; }
     public PlayerLandState PlayerLandState { get; private set; }    
 
     public PlayerWallSlideState PlayerWallSlideState { get; private set; }
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour
 
     public Rigidbody2D RB { get; private set; }
     public Animator Anim { get; private set; }
+    public BoxCollider2D BoxCollider { get; private set; }
 
     public Transform DashDirectionIndicator { get; private set; }
     #endregion
@@ -64,6 +66,7 @@ public class Player : MonoBehaviour
         PlayerWallJumpState = new PlayerWallJumpState(this, StateMachine, playerData,"jump");
         PlayerDashState = new PlayerDashState(this, StateMachine, playerData, "dash");
         PlayerDashStateTwo = new PlayerDashStateTwo(this, StateMachine, playerData, "dash");
+        PlayerDieState = new PlayerDieState(this, StateMachine, playerData, "die");
     }
     private void Start()
     {
@@ -71,6 +74,8 @@ public class Player : MonoBehaviour
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
+        BoxCollider = GetComponent<BoxCollider2D>();
+
         DashDirectionIndicator = transform.Find("DashDirectionIndicator");
         FacingDirection = 1;
         StateMachine.Initalize(PlayerIdleState);

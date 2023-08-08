@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class RustyPlatform : MonoBehaviour
 {
@@ -11,23 +10,22 @@ public class RustyPlatform : MonoBehaviour
     public float resetDuration = 5f;
 
     public float shakeMagnitude = 0.1f;
-    public TilemapRenderer tilemap2;
     private bool isActive = false;
     private bool isDissapear = false;
     private float timer;
     private float showTimer;
     private Vector2 originalPosition;
     #region Component
-    private TilemapCollider2D tilemapCollider;
-    private TilemapRenderer SR;
+    private BoxCollider2D boxCollider;
+    private SpriteRenderer SR;
     #endregion
     void Start()
     {
         timer = initialDuration;
         showTimer = resetDuration;
         originalPosition = transform.position;
-        tilemapCollider = GetComponent<TilemapCollider2D>();
-        SR = GetComponent<TilemapRenderer>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        SR = GetComponent<SpriteRenderer>();
     }
 
     
@@ -36,13 +34,9 @@ public class RustyPlatform : MonoBehaviour
         if (isActive) {
             StartCoroutine(ShakeCube());
             timer -= Time.deltaTime;
-            if (timer <= 0.1f)
-            {
-                DropPlatform();
-            }
             if (timer <= 0f)
             {
-                DropChunks();
+                DropPlatform();
             }
         }
         else if (isDissapear)
@@ -68,7 +62,7 @@ public class RustyPlatform : MonoBehaviour
 
     private void ShowPlatform()
     {
-        tilemapCollider.enabled = true;
+        boxCollider.enabled = true;
         SR.enabled = true;
         showTimer = resetDuration;
         isDissapear = false;
@@ -77,19 +71,12 @@ public class RustyPlatform : MonoBehaviour
 
     private void DropPlatform()
     {
-        tilemapCollider.enabled = false;
+        boxCollider.enabled = false;
         SR.enabled = false;
         isDissapear = true;
-        tilemap2.enabled = true;
-    }
-
-    private void DropChunks()
-    {
-        timer = initialDuration;
         isActive = false;
-        tilemap2.enabled = false;
+        timer = initialDuration;
     }
-
     private IEnumerator ShakeCube()
     {
         float elapsedTime = initialDuration;

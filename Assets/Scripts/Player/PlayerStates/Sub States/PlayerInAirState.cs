@@ -46,7 +46,10 @@ public class PlayerInAirState : PlayerState
         grapInput = player.InputHandler.GrapInput;
         dashInput = player.InputHandler.DashInput;
         CheckJumpMultiplier();
-        if (isGrounded && player.CurrentVelocity.y < Mathf.Epsilon)
+        if (player.BoxCollider.IsTouchingLayers(LayerMask.GetMask("Hazard"))) {
+            stateMachine.ChangeState(player.PlayerDieState);
+        }
+        else if (isGrounded && player.CurrentVelocity.y < Mathf.Epsilon)
         {
             stateMachine.ChangeState(player.PlayerIdleState);
         }

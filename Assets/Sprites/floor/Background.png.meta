@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/Sprites/floor/Background.png.meta
 guid: 7b11051f838973f4da66c22c020fe49e
+=======
+guid: 26bf5402adb0a134887d3bc4bff01a6b
+>>>>>>> Stashed changes:Assets/Sprites & Tiles/Sprites/jump/Frame 1.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

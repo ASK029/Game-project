@@ -14,8 +14,8 @@ TagManager:
   - Ground
   - Player
   - Wall
-  - background
-  - 
+  - Background
+  - Hazard
   - 
   - 
   - 
@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< Updated upstream
+=======
+  - name: Background
+    uniqueID: 2621182357
+    locked: 0
+  - name: ForeGround
+    uniqueID: 3347481945
+    locked: 0
+  - name: Hazard
+    uniqueID: 3213723333
+    locked: 0
+  - name: Player
+    uniqueID: 652024605
+    locked: 0
+>>>>>>> Stashed changes

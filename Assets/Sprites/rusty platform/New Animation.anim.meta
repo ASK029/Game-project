@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/Sprites/rusty platform/New Animation.anim.meta
 guid: 1a0dcee2b1cdd0047a0201d28e0043cb
+=======
+guid: 30bc66ea0b8203048981be3e93650758
+>>>>>>> Stashed changes:Assets/Animation/Player/Climp.anim.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000

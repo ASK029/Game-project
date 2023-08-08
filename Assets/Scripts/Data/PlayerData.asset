@@ -33,7 +33,7 @@ MonoBehaviour:
   dashEndYMultiplier: 0.05
   distanceBetweenAfterImage: 0.5
   groundCheckRadius: 0.1
-  tallOfLineWallCheck: 0.25
+  tallOfLineWallCheck: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 64

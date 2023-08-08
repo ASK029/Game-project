@@ -9,11 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-<<<<<<< Updated upstream
-    <ProjectGuid>{9CD3FCA8-DFD8-802C-399C-5F61B3FB5F23}</ProjectGuid>
-=======
     <ProjectGuid>{96F77FF5-EE90-86BE-14FD-FBD62DF3F125}</ProjectGuid>
->>>>>>> Stashed changes
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,10 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\Player Finite State Machine\PlayerState.cs" />
     <Compile Include="Assets\Scripts\Data\PlayerData.cs" />
-<<<<<<< Updated upstream
-=======
     <Compile Include="Assets\Scripts\Player\PlayerStates\Super States\PlayerDieState.cs" />
->>>>>>> Stashed changes
     <Compile Include="Assets\Scripts\Player\PlayerAfterImage.cs" />
     <Compile Include="Assets\Scripts\Platform\PlatformController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStates\Super States\PlayerAbilityState.cs" />
@@ -867,12 +860,6 @@
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
-<<<<<<< Updated upstream
-    <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
-    </Reference>
-=======
->>>>>>> Stashed changes
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>

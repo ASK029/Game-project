@@ -66,7 +66,6 @@ public class RustyPlatform : MonoBehaviour
         SR.enabled = true;
         showTimer = resetDuration;
         isDissapear = false;
-        tilemap2.enabled = true;
     }
 
     private void DropPlatform()
